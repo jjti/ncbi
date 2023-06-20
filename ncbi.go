@@ -11,15 +11,17 @@
 //
 // The following two parameters should be included in all requests.
 //
-//  tool   Name of application making the call. Its value must be a string with no internal
-//         spaces.
+//	tool   Name of application making the call. Its value must be a string with no internal
+//	       spaces.
 //
-//  email  E-mail address of the user. Its value must be a string with no internal spaces,
-//         and should be a valid e-mail address.
+//	email  E-mail address of the user. Its value must be a string with no internal spaces,
+//	       and should be a valid e-mail address.
 package ncbi
 
 import (
+	"bytes"
 	"encoding/xml"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -134,7 +136,17 @@ func (ut Util) GetXML(v url.Values, tool, email string, l *Limiter, d interface{
 		return err
 	}
 	defer resp.Body.Close()
-	return xml.NewDecoder(resp.Body).Decode(d)
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return fmt.Errorf("failed to read body: %w", err)
+	}
+
+	if err := xml.NewDecoder(bytes.NewReader(body)).Decode(d); err != nil {
+		return fmt.Errorf("failed to decode xml: %w\n\n%s", err, body)
+	}
+
+	return nil
 }
 
 // Get performs a GET or POST method call to the URI in ut, passing the parameters in v,
