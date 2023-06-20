@@ -21,6 +21,7 @@ package ncbi
 import (
 	"bytes"
 	"encoding/xml"
+	"errors"
 	"fmt"
 	"io"
 	"net/http"
@@ -31,6 +32,9 @@ import (
 )
 
 var client = http.Client{Timeout: 10 * time.Second}
+
+// ErrWaiting is thrown if the query is ongoing.
+var ErrWaiting = errors.New("waiting on blast query to finish")
 
 // SetTimeout sets the HTTP client timeout duration. The default timeout is 10 seconds.
 func SetTimeout(d time.Duration) {
@@ -142,6 +146,12 @@ func (ut Util) GetXML(v url.Values, tool, email string, l *Limiter, d interface{
 		return fmt.Errorf("failed to read body: %w", err)
 	}
 
+	// Check if we're still waiting.
+	if strings.Contains(string(body), "Status=WAITING") {
+		return ErrWaiting
+	}
+
+	// Try to decode.
 	if err := xml.NewDecoder(bytes.NewReader(body)).Decode(d); err != nil {
 		return fmt.Errorf("failed to decode xml: %w\n\n%s", err, body)
 	}
