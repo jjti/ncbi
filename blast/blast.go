@@ -16,11 +16,11 @@
 //
 // The following two parameters should be included in all BLAST requests.
 //
-//  tool   Name of application making the BLAST call. Its value must be a string with no
-//         internal spaces.
+//	tool   Name of application making the BLAST call. Its value must be a string with no
+//	       internal spaces.
 //
-//  email  E-mail address of the BLAST user. Its value must be a string with no internal
-//         spaces, and should be a valid e-mail address.
+//	email  E-mail address of the BLAST user. Its value must be a string with no internal
+//	       spaces, and should be a valid e-mail address.
 package blast
 
 import (
@@ -32,7 +32,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/biogo/ncbi"
+	"github.com/jjti/ncbi"
 )
 
 var (

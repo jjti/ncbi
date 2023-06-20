@@ -12,8 +12,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/biogo/ncbi"
-	"github.com/biogo/ncbi/entrez"
+	"github.com/jjti/ncbi"
+	"github.com/jjti/ncbi/entrez"
 )
 
 const (

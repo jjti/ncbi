@@ -5,7 +5,7 @@
 package entrez
 
 import (
-	"github.com/biogo/ncbi/entrez/link"
+	"github.com/jjti/ncbi/entrez/link"
 )
 
 // <!--

@@ -20,11 +20,11 @@
 //
 // The following two parameters should be included in all E-utility requests.
 //
-//  tool   Name of application making the E-utility call. Its value must be a string with no
-//         internal spaces.
+//	tool   Name of application making the E-utility call. Its value must be a string with no
+//	       internal spaces.
 //
-//  email  E-mail address of the E-utility user. Its value must be a string with no internal
-//         spaces, and should be a valid e-mail address.
+//	email  E-mail address of the E-utility user. Its value must be a string with no internal
+//	       spaces, and should be a valid e-mail address.
 package entrez
 
 import (
@@ -40,7 +40,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/biogo/ncbi"
+	"github.com/jjti/ncbi"
 )
 
 // The E-utilities default to "pubmed". Some functions mark which db was used because E-utilities

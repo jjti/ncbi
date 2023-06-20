@@ -8,7 +8,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/biogo/ncbi/blast"
+	"github.com/jjti/ncbi/blast"
 )
 
 const (

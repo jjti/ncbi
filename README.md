@@ -2,23 +2,23 @@
 
 # NCBI
 
-[![Build Status](https://travis-ci.org/biogo/ncbi.svg?branch=master)](https://travis-ci.org/biogo/ncbi) [![GoDoc](https://godoc.org/github.com/biogo/ncbi?status.svg)](https://godoc.org/github.com/biogo/ncbi)
+[![Build Status](https://travis-ci.org/biogo/ncbi.svg?branch=master)](https://travis-ci.org/biogo/ncbi) [![GoDoc](https://godoc.org/github.com/jjti/ncbi?status.svg)](https://godoc.org/github.com/jjti/ncbi)
 
 ## Installation
 
 The NCBI package requires a functioning [Go compiler installation](https://golang.org/doc/install).
 
-        $ go get github.com/biogo/ncbi/...
+        $ go get github.com/jjti/ncbi/...
 
 ## Overview
 
 ncbi provides API interfaces to NCBI services.
 
-* [Entrez Utility Programs](https://www.ncbi.nlm.nih.gov/books/NBK25501/)
+- [Entrez Utility Programs](https://www.ncbi.nlm.nih.gov/books/NBK25501/)
 
-* [BLAST](https://ncbi.github.io/blast-cloud/)
+- [BLAST](https://ncbi.github.io/blast-cloud/)
 
-## Citing ##
+## Citing
 
 If you use bíogo/ncbi, please cite Kortschak and Adelson "bíogo/ncbi: interfaces to NCBI services for the Go language", doi:[10.21105/joss.00234](http://dx.doi.org/10.21105/joss.00234), and Kortschak and Adelson "bíogo: a simple high-performance bioinformatics toolkit for the Go language", doi:[10.1101/005033](http://biorxiv.org/content/early/2014/05/12/005033).
 
@@ -39,8 +39,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/biogo/ncbi"
-	"github.com/biogo/ncbi/entrez"
+	"github.com/jjti/ncbi"
+	"github.com/jjti/ncbi/entrez"
 )
 
 const (

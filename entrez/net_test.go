@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/biogo/ncbi/entrez/link"
-	. "github.com/biogo/ncbi/entrez/spell"
-	. "github.com/biogo/ncbi/entrez/summary"
+	"github.com/jjti/ncbi/entrez/link"
+	. "github.com/jjti/ncbi/entrez/spell"
+	. "github.com/jjti/ncbi/entrez/summary"
 
 	"gopkg.in/check.v1"
 )

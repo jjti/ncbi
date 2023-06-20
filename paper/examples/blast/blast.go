@@ -17,7 +17,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/biogo/ncbi/blast"
+	"github.com/jjti/ncbi/blast"
 	"github.com/kortschak/utter"
 )
 

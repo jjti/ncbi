@@ -5,7 +5,7 @@
 package entrez
 
 import (
-	"github.com/biogo/ncbi/entrez/spell"
+	"github.com/jjti/ncbi/entrez/spell"
 )
 
 // <!--

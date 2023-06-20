@@ -12,8 +12,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/biogo/ncbi/blast"
-	"github.com/biogo/ncbi/blast/graphic"
+	"github.com/jjti/ncbi/blast"
+	"github.com/jjti/ncbi/blast/graphic"
 
 	"gonum.org/v1/plot/vg"
 	"gonum.org/v1/plot/vg/vgsvg"

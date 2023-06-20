@@ -8,7 +8,7 @@ import (
 	"encoding/xml"
 	"strings"
 
-	"github.com/biogo/ncbi/entrez/info"
+	"github.com/jjti/ncbi/entrez/info"
 
 	"gopkg.in/check.v1"
 )

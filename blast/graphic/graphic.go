@@ -10,7 +10,7 @@ import (
 	"image/color"
 	"math"
 
-	"github.com/biogo/ncbi/blast"
+	"github.com/jjti/ncbi/blast"
 
 	"gonum.org/v1/plot/vg"
 )
